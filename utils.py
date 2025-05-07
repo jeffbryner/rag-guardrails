@@ -119,7 +119,7 @@ def allowed_subject(subject, embedder=None):
     results = (
         table.search(embedder.get_embedding(subject))
         .distance_type("cosine")
-        .distance_range(0, 0.45)
+        .distance_range(0, 0.50)
         .to_pandas()
     )
     # debug
